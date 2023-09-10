@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main-container">
-        <div id="header">
-            <p id="head">BMI CALCULATOR</p>
+      <div id="header">
+        <p id="head">BMI CALCULATOR</p>
+      </div>
+      <div class="age">
+        <p>AGE</p>
+        <input type="number" id="age" />
+        <p class="error" id="age-err">*Please enter valid age!</p>
+      </div>
+      <div class="gender">
+        <div class="left">
+          <input type="checkbox" id="male" />
+          <label for="male">Male</label>
         </div>
-        <div class="age">
-            <p>AGE</p>
-            <input type="text" >
+        <div class="right">
+          <input type="checkbox" id="female" />
+          <label for="Female">Female</label>
         </div>
-        <div class="gender">
-            <div class="left">
-                <input type="checkbox" id="male">
-                <label for="male">Male</label>
-            </div>
-            <div class="right">
-                <input type="checkbox" id="Female">
-                <label for="Female">Female</label>
-            </div>   
+      </div>
+      <div class="main-input">
+        <div class="height">
+          <p>Height(cm)</p>
+          <input type="number" id="height"/>
+          <p class="error" id="height-err">*Please enter valid height!</p>
         </div>
-        <div class="main-input">
-            <div class="height">
-                <p>Height(cm)</p>
-                <input type="text" >
-            </div>
-            <div class="weight">
-                <p>Weight(kg)</p>
-                <input type="text" >
-            </div>
+        <div class="weight">
+          <p>Weight(kg)</p>
+          <input type="number" id="weight"/>
+          <p class="error" id="weight-err">*Please enter valid height!</p>
         </div>
-        <button id="btn">Calculate BMI</button>
-        <p id="result-text">Your BMI is</p>
-        <P id="result-BMI">00.00</P>
-        <p id="footer">By <a href="#">Betselot Abraham</a></p>
-    </div> 
-</body>
+      </div>
+      <button id="btn">Calculate BMI</button>
+      <p class="error" id="gender-err">*Please choose one gender!</p>
+      <p id="result-text">Your BMI is</p>
+      <p id="result-BMI">00.00</p>
+      <p id="footer">
+        By
+        <a href="https://www.linkedin.com/in/betselot-abraham-184753285"
+          >Betselot Abraham</a
+        >
+      </p>
+    </div>
+    <script src="./JS/Index.js"></script>
+  </body>
 </html>

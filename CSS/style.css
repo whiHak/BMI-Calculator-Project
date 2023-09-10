@@ -1,141 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(68, 174, 235);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-#main-container{
-    display: block;
-    position: absolute;
-    top: 50px;
-    width: 375px;
-    height: 90%;
-    border-radius: 30px;
-    background: rgb(246, 242, 242);
-    overflow: hidden;
-}
-#head{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 40px;
-    margin: 10px;
-    font-family: 'Gochi Hand', sans-serif;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(68, 174, 235);
 }
 
-.age{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgb(255, 255, 255);
-    width: 325px;
-    height: max-content;
-    overflow: hidden;
-    margin: 25px;
-    border-radius: 10px;
-    font-weight: 600;
+#main-container {
+  display: block;
+  position: absolute;
+  top: 50px;
+  width: 375px;
+  height: 90%;
+  border-radius: 30px;
+  background: rgb(246, 242, 242);
+  overflow: hidden;
 }
-:is(.age, .height, .weight) p{
-    font-size: 20px;
-    margin: 10px;
-}
-:is(.age, .height, .weight) input{
-    height: 30px;
-    border: 2px solid transparent;
-    border-bottom: 2px solid rgb(40, 152, 218);
-    margin-bottom: 10px;
-    width: 100px;
-    text-align: center;
-}
-.gender{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 325px;
-    margin: 25px;
-    border-radius: 10px;
-    background: rgb(255, 255, 255);
-    font-weight: 600;
-}
-.gender label{
-    padding-left: 5px;
+#head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 40px;
+  margin: 10px;
+  font-family: "Gochi Hand", sans-serif;
 }
 
-.gender .right, .gender .left{
-    margin: 10px 20px;
-    display: flex;
-    align-items: center;
+.age {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  width: 325px;
+  height: max-content;
+  overflow: hidden;
+  margin: 25px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+:is(.age, .height, .weight) p {
+  font-size: 20px;
+  margin: 10px;
+}
+:is(.age, .height, .weight) input {
+  height: 30px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid rgb(40, 152, 218);
+  margin-bottom: 10px;
+  width: 100px;
+  text-align: center;
+}
+:is(.age, .height, .weight) input:focus {
+    outline: none;
+}
+.gender {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 325px;
+  margin: 25px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.gender label {
+  padding-left: 5px;
 }
 
-.main-input{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.gender .right,
+.gender .left {
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
 }
-.height, .weight{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgb(255, 255, 255);
-    width: 325px;
-    height: max-content;
-    overflow: hidden;
-    margin: 0 25px;
-    border-radius: 10px;
-    font-weight: 600;
+
+.main-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-#btn{
-    width: 325px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 25px;
-    border-radius: 5px;
-    background: rgb(40, 152, 218);
-    cursor: pointer;
+.height,
+.weight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  width: 325px;
+  height: max-content;
+  overflow: hidden;
+  margin: 0 25px;
+  border-radius: 10px;
+  font-weight: 600;
 }
-#result-text{
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 30px;
+#btn {
+  width: 325px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  border-radius: 5px;
+  background: rgb(40, 152, 218);
+  border: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
 }
-#result-BMI{
-    position: relative;
-    left: 35%;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    margin: 10px;
-    color: rgb(40, 152, 218);
-    background: rgb(187, 194, 197);
-    border-radius: 20px;
-    width: max-content;
-    font-size: 25px;
-    font-weight: 700;
-    
+#result-text {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+#result-BMI {
+  position: relative;
+  left: 35%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  color: rgb(40, 152, 218);
+  background: rgb(187, 194, 197);
+  border-radius: 20px;
+  width: max-content;
+  font-size: 25px;
+  font-weight: 700;
+}
+.error {
+  color: red;
+  font-size: 10px !important;
+  display: none;
 }
 #footer {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
 }
-#footer a{
-    color: #000;
-    opacity: .4;
+#footer a {
+  color: #000;
+  opacity: 0.4;
 }
