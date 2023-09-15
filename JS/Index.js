@@ -16,13 +16,13 @@ function throwError(){
     // var gnErr = document.getElementById(error[3].id)
     if(age.val() === '' || age.val() === undefined || age.val() < 1 || age.val() > 150 || age.val() === NaN){
         ageErr.style.display = 'block';
-    }
-    else if(height.val() === '' || height.val() === undefined || height.val() === NaN || height.val() < 1){
+    }else error.css('display', 'none')
+    if(height.val() === '' || height.val() === undefined || height.val() === NaN || height.val() < 1){
         heightErr.style.display = 'block';
-    }else if(weight.val() === '' || weight.val() === undefined || weight.val() === NaN || weight.val() < 3){
+    }else error.css('display', 'none')
+    if(weight.val() === '' || weight.val() === undefined || weight.val() === NaN || weight.val() < 3){
         weightErr.style.display = 'block';
     }else{
-        error.css('display', 'none')
         return true;
     }
 }

@@ -135,6 +135,8 @@ body {
   width: max-content;
   font-size: 25px;
   font-weight: 700;
+  transition: 5s;
+  transform: translateX(5px);
 }
 .error {
   color: red;
